@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --dark-blue-header-mail: #1c2431;
+    --dark-blue-main: #181f2a;
+    --dark-blue-footer: #0b1523;
+    --dark-blue-testimonials: #202a3c;
+    --light-red: #ff4242;
+    --white: #fff
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box; 
+}
+
+html, body {
+    font-size: 14px;
+    color: var(--white);
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: var(--dark-blue-main);
+}
+
+.logo img {
+    height: 2.5rem;
+}
+
+.btn {
+    display: block;
+    background: #65e2d9;
+    background: linear-gradient(45deg, #65e2d9 0%, #336dbb 100%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin: auto;
+    border-radius: 50px;
+    padding: 1rem 5rem;
+    max-width: max-content;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.btn:hover {
+    background: #65e2da;
+    transform: scale(1.01);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    line-height: 2rem;
+    color: #d5d5d5;
+    font-size: 16px;
+}
+
+span {
+    font-size: .8em
+}
+
+img {
+    max-width: 100%
+}
+
+header {
+    background-color: var(--dark-blue-header-mail);
+    min-height: 100vh;
+    background-image: url('../images/bg-curvy-desktop.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100vw;
+}
+
+header nav {
+    padding: 1.5rem;
+    max-width: 964px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+header .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header .nav-links a {
+    color: #d5d5d5;
+    transition: .2s all;
+}
+
+header .nav-links a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.header-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 20px;
+    padding-bottom: 7rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.header-content img {
+    display: block;
+    margin: auto;
+    width: 75vh;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+main .section-advantages{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 964px;
+    margin: auto;
+}
+
+main .section-advantages .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+main .section-advantages .card img {
+    max-width: fit-content;
+}
+
+main .section-produtive {
+    padding: 5rem 20px;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin: auto;
+}
+
+main .section-produtive .section-text, main .section-produtive img {
+    width: 50%;
+}
+
+main .section-produtive .section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .section-produtive .section-text h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+main .section-produtive .section-text a {
+    display: flex;
+    gap: 5px;
+    color: #65e2d9;
+    text-decoration: underline;
+    transition: .2s all;
+}
+
+main .section-produtive .section-text a .arrow-forward-circle {
+    font-size: 1.5rem;
+    color: #65e2d9;
+}
+
+main .section-produtive .section-text a:hover {
+    color: var(--white);
+}
+
+main .section-produtive .section-text a:hover .arrow-forward-circle {
+    color: var(--white);
+}
+
+main .section-comments {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2.5rem 20px;
+    background-image: url('../images/bg-quotes.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+main .section-comments .comment {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--dark-blue-testimonials);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+main .section-comments .comment .profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: .95rem;
+}
+
+main .section-comments .comment .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main .section-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+    background-color: var(--dark-blue-header-mail);
+    padding: 1.5rem 2.5rem;
+    max-width: 768px;
+    margin: 0 auto;
+    border-radius: 4px;
+    transform: translateY(50%);
+}
+main .section-form h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+main .section-form p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+main .section-form form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+main .section-form form input {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    flex: 1;
+}
+
+main .section-form form button {
+    padding: 1rem 2rem;
+}
+
+footer {
+    background-color: var(--dark-blue-footer);
+    padding-top: 10rem;
+}
+
+footer .logo {
+    max-width: 964px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 964px;
+    margin: auto;
+}
+
+footer .footer-content  a {
+    color: #d5d5d5;
+    transition: .2s all;
+}
+
+footer .footer-content  a:hover {
+    font-weight: bold;
+}
+
+footer .footer-content div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .footer-content p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .9rem;
+    max-width: 350px;
+}
+
+footer .footer-content .social-media ion-icon {
+    border: 1px solid #d5d5d5;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+footer .footer-content .social-media ion-icon:hover {
+    color: #65e2d9;
+}
+
+footer .footer-content p ion-icon {
+    font-size: 1.5rem;
+    min-width: 1.5rem;
+}
+
+/* media query */
+@media (max-width: 768px) {
+    header {
+        background-image: url('../images/bg-curvy-mobile.svg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: 100vw;
+    }
+
+    nav {
+        padding: 1.5rem;
+        margin: 20px;
+    }
+
+    main .section-advantages .card {
+        width: 100%;
+    }
+
+    main .section-produtive {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    main .section-produtive .section-text, main .section-produtive img {
+        width: 100%;
+    }
+
+    main .section-produtive .section-text h2 {
+        font-size: 1.5rem;
+    }
+
+    main .section-comments {
+        margin: 0 2%;
+    }
+
+    main .section-comments {
+        flex-direction:column;
+    }
+
+    main .section-form {
+        padding: 1.5rem;
+        margin: 0 20px;
+        margin-bottom: 2.5rem;
+    }
+
+    main .section-form h2 {
+        font-size: 1.5rem;
+    }
+
+    main .section-form form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main .section-form form input, main .section-form form .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 0 20px;
+        padding-top: 15rem;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    footer .footer-content div{
+        height: max-content;
+    }
+}
