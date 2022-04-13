@@ -23,6 +23,8 @@ html, body {
     color: var(--white);
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: var(--dark-blue-main);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .logo img {
@@ -91,6 +93,11 @@ header .nav-links {
     list-style-type: none;
     display: flex;
     gap: 2rem;
+}
+
+header nav .menu-outline {
+    display: none;
+    z-index: 999;
 }
 
 header .nav-links a {
@@ -206,6 +213,7 @@ main .section-comments .comment {
     background-color: var(--dark-blue-testimonials);
     padding: 2rem;
     border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 main .section-comments .comment .profile {
@@ -228,11 +236,12 @@ main .section-form {
     gap: 1.2rem;
     text-align: center;
     background-color: var(--dark-blue-header-mail);
-    padding: 1.5rem 2.5rem;
+    padding: 3rem 2.5rem;
     max-width: 768px;
     margin: 0 auto;
     border-radius: 4px;
     transform: translateY(50%);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 main .section-form h2 {
     font-size: 2.5rem;
@@ -265,7 +274,7 @@ main .section-form form button {
 
 footer {
     background-color: var(--dark-blue-footer);
-    padding-top: 10rem;
+    padding-top: 12rem;
 }
 
 footer .logo {
@@ -320,7 +329,6 @@ footer .footer-content p ion-icon {
     min-width: 1.5rem;
 }
 
-/* media query */
 @media (max-width: 768px) {
     header {
         background-image: url('../images/bg-curvy-mobile.svg');
@@ -333,6 +341,32 @@ footer .footer-content p ion-icon {
     nav {
         padding: 1.5rem;
         margin: 20px;
+    }
+
+    nav .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5rem;
+        width: 0;
+        min-height: 100vh;
+        background-color: var(--dark-blue-footer);
+        font-size: 3rem;
+        overflow: hidden;
+        transition: all .2s;
+    }
+
+    nav .nav-links.active {
+        width: 100%;
+    }
+
+    header nav .menu-outline {
+        display: block ;
+        font-size: 2.5rem;
     }
 
     main .section-advantages .card {
