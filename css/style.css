@@ -255,11 +255,13 @@ main .section-form p {
 }
 
 main .section-form form {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
     padding: 0 1.5rem;
+    padding-top: 22px;
 }
 
 main .section-form form input {
@@ -268,12 +270,23 @@ main .section-form form input {
     flex: 1;
 }
 
+main .section-form form .alert-form {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: red;
+}
+
 main .section-form form button {
     padding: 1rem 2rem;
 }
 
 footer {
     background-color: var(--dark-blue-footer);
+    padding: 0 12px;
     padding-top: 12rem;
 }
 

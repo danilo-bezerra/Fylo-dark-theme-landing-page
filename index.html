@@ -138,9 +138,10 @@
         It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
         questions, our support team would be happy to help you.
       </p>
-      <form >
+      <form>
+        <div class="alert-form">Insert a valid email address</div>
         <input type="email" id="email" name="email" placeholder="email@email.com">
-        <button class="btn">Get Started For Free</button>
+        <button class="btn" id="btn-form">Get Started For Free</button>
       </form>
     </section>
   
@@ -192,9 +193,25 @@
   <script>
     const menuOutline = document.querySelector('.menu-outline');
     const navLinks = document.querySelector('.nav-links');
+    const btnForm = document.querySelector('#btn-form');
+    const alertForm = document.querySelector('.alert-form');
+    
 
     menuOutline.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    btnForm.addEventListener("click", function ValidateEmail(e) {
+      e.preventDefault();
+      const inputEmail = document.querySelector('#email');
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value)) {
+        alertForm.style.display = 'none';
+        inputEmail.style.border = '2px solid #22ff22';
+        return
+      }
+      alertForm.style.display = 'block';
+      inputEmail.style.border = '2px solid #ff2222';
+      return 
     });
   </script>
 </body>
